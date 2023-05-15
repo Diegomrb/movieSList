@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieSList</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>      
+    <div class="modal_form  mt-0"> 
+        <div class="alert">
+
+          <section id="login" class="vh-100">
+  <div  class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+        <div class="card" style="border-radius: 1rem;">
+          <div class="row g-0">
+            
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
+
+                <form>
+
+                  <div class="d-flex align-items-center mb-3 pb-1">
+                    
+                    <span class="h1 fw-bold mb-0"><img src="img/movielist-logo.png" alt="movielist-logo"></span>
+                  </div>
+
+                  <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Hola! Inicia sesión para ver tu lista.</h5>
+
+                  <div class="form-outline mb-4">
+                    <input type="text" id="txt_user" value="" class="form-control form-control-lg" placeholder="Usuario" />
+                    <label class="form-label" for="txt_user">Usuario</label>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="password" id="txt_pass" class="form-control form-control-lg" placeholder="Contraseña" />
+                    <label class="form-label" for="txt_pass">Contraseña</label>
+                  </div>
+
+                  <div class="pt-1 mb-4">
+                    <button  id="bt_loguear" class="btn btn-info btn-dark btn-lg btn-block" value="Acceder" type="button">Acceder</button> 
+                  </div>
+
+                  <a class="small text-muted" href="#!">Forgot password?</a>
+                  <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="#!"
+                      style="color: #393f81;">Register here</a></p>
+                  <a href="#!" class="small text-muted">Terms of use.</a>
+                  <a href="#!" class="small text-muted">Privacy policy</a>
+                </form>
+
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-5 d-none d-md-block">
+              <img src="https://images.unsplash.com/photo-1563901529645-025f8e326bbc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=607&q=100"
+                alt="login form" class="img-fluid" style="border-radius: 0 1rem 1rem 0;" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+            <!-- fin login -->
+
+
+            <!-- comienzo Content -->
+            
+            
+            <div id="info" style="display: none" class="container" >
+                <div class="nav_ row py-2">
+                    <h1 class="col"> <b>MovieSList</b></h1>
+                    <!-- <input type="button" id="bt_cerrar" value="Salir" class="col-md-1 form-select-sm float-end nav_"> -->
+                    <button  id="bt_cerrar" class="btn btn-secondary mr-5 col-md-1 btn-block float-end " value="Salir" type="button">Salir</i></button> 
+                </div>
+                <div class="row">
+                    <div class="col-md-8 lista_" >
+                        <div class="container my-2">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <select class="form-control" id="genero_query" aria-label="Default select example">
+                                        <option value="NONE" selected>Filtrar genero</option>
+                                        <option value="ACCION">ACCIÓN</option>
+                                        <option value="ANIME">ANIME</option>
+                                        <option value="INTRIGA">INTRIGA</option>
+                                        <option value="CLASICAS">CLÁSICAS</option>
+                                        <option value="COMEDIAS">COMEDIAS</option>
+                                        <option value="CORTOS">CORTOS</option>
+                                        <option value="DE_HOLLIWOOD">DEHOLLIWOOD</option>
+                                        <option value="DEPORTES">DEPORTES</option>
+                                        <option value="DE_ADOLESCENTES">DE ADOLESCENTES</option>
+                                        <option value="DOCUMENTALES">DOCUMENTALES</option>
+                                        <option value="DRAMAS">DRAMAS</option>
+                                        <option value="FANTASIA">FANTASÍA</option>
+                                        <option value="FE_Y_ESPIRITUALIDAD">FE Y ESPIRITUALIDAD</option>
+                                        <option value="INDEPENDIENTES">INDEPENDIENTES</option>
+                                        <option value="INTERNACIONALES">INTERNACIONALES</option>
+                                        <option value="LATINOAMERICANAS">LATINOAMERICANAS</option>
+                                        <option value="LOS_FAVORITOS_DE_LA_CRITICA">LOS FAVORITOS DE LA CRÍTICA</option>
+                                        <option value="MÚSICA_Y_MUSICALES">MÚSICA Y MUSICALES</option>
+                                        <option value="PARA_VER_EN_FAMILIA">PARA VER EN FAMILIA</option>
+                                        <option value="POLICIALES">POLICIALES</option>
+                                        <option value="ROMANCES">ROMANCES</option>
+                                        <option value="SCI-FI">SCI-FI</option>
+                                        <option value="TERROR">TERROR</option> 
+                                      </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <select class="form-control" id="category_query" aria-label="Default select example">
+                                        <option value="NONE" selected>Filtrar categoria</option>
+                                        <option value="PELICULA">PELICULA</option>
+                                        <option value="SERIE">SERIE</option> 
+                                      </select>
+                                </div>
+                                <div class="col-md-5">
+                                  <input type="text" id="txt_buscar" placeholder="Escribe un titulo.."  class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container global">
+                            <div id="datos" class="row mensajes"> </div>
+                        </div>
+                      </div>
+                   <div class="col-md-4 form_ content_" >
+                    
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Contenido</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Usuarios</button>
+                        </li>
+                      </ul>
+                      <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+                            <h4 class="title mt-1">Ingresar pelicula o serie</h4>
+                            <label for="title_">Titulo</label>
+                            <input type="text" id="title" class="form-control fondo_input" placeholder="Escribe un titulo para la serie o pelicula" required>  
+                            <label for="year_" class="mt-1">Año de publicación</label>
+                            <input type="number" id="year" class="form-control fondo_input" placeholder="Año de publicación" required> 
+                            <label for="category">Categoria</label> <br>
+                            <select class="form-select form-select-sm fondo_input" id="category" aria-label="Default select example" hidden>
+                                <option selected>Seleciona una categoria</option>
+                                <option value="PELICULA">PELICULA</option>
+                                <option value="SERIE">SERIE</option> 
+                              </select>
+                              <input type="radio" id="category_0" name="category" value="PELICULA">
+                               <label for="PELICULA">Pelicula</label><br>
+                               <input type="radio" id="category_1" name="category" value="SERIE">
+                               <label for="SERIE">Serie</label><br>
+                              <label for="genero">Genero</label>
+                              <select class="form-select form-select-sm fondo_input" id="genero" aria-label="Default select example">
+                                <option selected>Selecciona un genero..</option>
+                                <option value="ACCION">ACCIÓN</option>
+                                <option value="ANIME">ANIME</option>
+                                <option value="INTRIGA">INTRIGA</option>
+                                <option value="CLASICAS">CLÁSICAS</option>
+                                <option value="COMEDIAS">COMEDIAS</option>
+                                <option value="CORTOS">CORTOS</option>
+                                <option value="DE_HOLLIWOOD">DEHOLLIWOOD</option>
+                                <option value="DEPORTES">DEPORTES</option>
+                                <option value="DE_ADOLESCENTES">DE ADOLESCENTES</option>
+                                <option value="DOCUMENTALES">DOCUMENTALES</option>
+                                <option value="DRAMAS">DRAMAS</option>
+                                <option value="FANTASIA">FANTASÍA</option>
+                                <option value="FE_Y_ESPIRITUALIDAD">FE Y ESPIRITUALIDAD</option>
+                                <option value="INDEPENDIENTES">INDEPENDIENTES</option>
+                                <option value="INTERNACIONALES">INTERNACIONALES</option>
+                                <option value="LATINOAMERICANAS">LATINOAMERICANAS</option>
+                                <option value="LOS_FAVORITOS_DE_LA_CRITICA">LOS FAVORITOS DE LA CRÍTICA</option>
+                                <option value="MÚSICA_Y_MUSICALES">MÚSICA Y MUSICALES</option>
+                                <option value="PARA_VER_EN_FAMILIA">PARA VER EN FAMILIA</option>
+                                <option value="POLICIALES">POLICIALES</option>
+                                <option value="ROMANCES">ROMANCES</option>
+                                <option value="SCI-FI">SCI-FI</option>
+                                <option value="TERROR">TERROR</option> 
+                              </select>
+                             <hr>
+                              <label for="status">Estatus</label>
+                              <select class="form-select form-select-sm fondo_input" id="status" aria-label="Default select example">
+                                <option value="ACTIVE">ACTIVE</option>
+                                <option value="INACTIVE">INACTIVE</option> 
+                              </select>
+                              <label for="description">Descripción</label>
+                              <textarea name="description" id="description" class="form-control fondo_input" placeholder="Escriba aqui su reseña.."></textarea>
+                            <hr>
+                            <input type="button" id="bt_mostrar" value="LISTAR" class="btn btn-info" hidden>
+                            <input type="button" value="Registrar" id="bt_ingresar" class="btn input">
+                            <input type="button" value="Actualizar" id="bt_modificar_content" class="btn input">
+                            
+
+
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+                            <form action="create" method="post">
+                                <h4 class="title">Crear cuenta </h4>
+                                <label for="txt_user">Usuario</label>
+                                <input type="text" id="username" value="" name="user" class="form-control" placeholder="Nombre de usuario">
+                                <label for="txt_pass">Contraseña</label>
+                                <input type="password" id="password" value="" name="pass" class="form-control" placeholder="Contraseña">
+                                <input type="button" value="Crear cuenta" id="create_usr" class="btn btn-info mt-1" >
+                             </form>
+
+                        </div> 
+                    
+                    
+                   </div>            
+                </div>
+            </div>
+        </div>
+    </div>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>

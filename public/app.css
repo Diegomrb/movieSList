@@ -1,0 +1,100 @@
+.modal_form {
+  color: black;
+  background: rgb(2, 0, 36);
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+}
+
+span img {
+  width: 45%;
+}
+
+.title {
+  color: #959595;
+}
+
+#bt_cerrar {
+  margin-right: 15px;
+}
+
+.nav_ {
+  background-color: #393939;
+  border-radius: 10px 10px 0px 0px;
+  color: white;
+}
+.fondo_input {
+  background-color: #cdcdcd;
+}
+
+.input {
+  background-color: #595dbc;
+  color: white;
+}
+.content_ {
+  background-color: #f2f2f2;
+  padding: auto;
+}
+.lista_ {
+  background-color: #cdcdcd;
+}
+.form_ {
+  background-color: #f2f2f2;
+}
+
+.global {
+  height: 600px;
+  width: 100%;
+  border: 0px solid #ddd;
+  overflow-y: scroll;
+}
+.mensajes {
+  height: auto;
+}
+.texto {
+  padding: 4px;
+  background: #fff;
+}
+
+/* app modal */
+
+.notice {
+  position: relative;
+  top: 30%;
+  width: 80%;
+  height: 40%;
+  border-radius: 15px;
+  background: #fff;
+  margin: auto;
+  z-index: 1;
+}
+.notice p {
+  padding: 15px 40px;
+}
+
+.modal_form {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.bar-title {
+  width: 100%;
+  background: #ec4b4b;
+  border-radius: 15px 15px 0 0;
+  padding: 15px 0;
+}
+
+.bar-title span {
+  color: #fff;
+  margin-left: 30px;
+  font-weight: 700;
+}
+
+/* login y registro */
